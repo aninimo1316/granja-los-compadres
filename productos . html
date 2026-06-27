@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Productos - La Granja de los Compadres</title>
+    <style>
+        body { font-family: Arial; background-color: #fff8dc; margin: 0; }
+        header { background-color: #228B22; color: white; text-align: center; padding: 20px; }
+        nav { background-color: #eee; padding: 10px; text-align: center; }
+        nav a { margin: 0 15px; text-decoration: none; color: #228B22; font-weight: bold; }
+        section { padding: 20px; }
+        footer { background-color: #228B22; color: white; text-align: center; padding: 10px; margin-top: 20px; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Productos de la Granja</h1>
+    </header>
+
+    <nav>
+        <a href="index.html">Gallinas Ponedoras</a>
+        <a href="productos.html">Productos</a>
+        <a href="contacto.html">Contacto</a>
+    </nav>
+
+    <section>
+        <h2>🥚 Huevos Frescos</h2>
+        <p>Recolectados cada mañana, 100% orgánicos.</p>
+
+    <footer>
+        <p>&copy; 2026 La Granja de los Compadres</p>
+    </footer>
+</body>
+</html>
