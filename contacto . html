@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Contacto - La Granja de los Compadres</title>
+    <style>
+        body { font-family: Arial; background-color: #fff8dc; margin: 0; }
+        header { background-color: #b22222; color: white; text-align: center; padding: 20px; }
+        nav { background-color: #eee; padding: 10px; text-align: center; }
+        nav a { margin: 0 15px; text-decoration: none; color: #b22222; font-weight: bold; }
+        section { padding: 20px; text-align: center; }
+        footer { background-color: #b22222; color: white; text-align: center; padding: 10px; margin-top: 20px; }
+        iframe { border: 0; width: 100%; height: 400px; border-radius: 10px; }
+        .whatsapp-btn {
+            display: inline-block;
+            background-color: #25D366;
+            color: white;
+            padding: 12px 20px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            margin: 10px;
+        }
+        .whatsapp-btn:hover { background-color: #1ebe5d; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Contacto</h1>
+    </header>
+
+    <nav>
+        <a href="index.html">Gallinas Ponedoras</a>
+        <a href="productos.html">Productos</a>
+        <a href="contacto.html">Contacto</a>
+    </nav>
+
+    <section>
+        <p>📍 Dirección: Solidaridad y Ruiz Cortines, Col. Rodrigo M. Quevedo, San Buenaventura, Chih.</p>
+        <p>📞 Teléfonos: (636)-101-6209 y (636)-114-3759</p>
+        <p>✉️ Email: granja@compadres.com</p>
+
+        <h2>Mapa de Ubicación</h2>
+        <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d864.5181532521335!2d-107.51192545989042!3d29.919811665742372!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x86c3113ad5356b63%3A0x2c70d98194408f1!2sGranja%20Los%20Compadres%20(Huevo%20Fresco)!5e0!3m2!1ses-419!2smx!4v1782533962420!5m2!1ses-419!2smx" 
+            width="800" height="600" style="border:0;" allowfullscreen="" loading="lazy" 
+            referrerpolicy="strict-origin-when-cross-origin">
+        </iframe>
+
+        <div>
+            <a class="whatsapp-btn" href="https://wa.me/526361016209" target="_blank">💬 WhatsApp (636)-101-6209</a>
+            <a class="whatsapp-btn" href="https://wa.me/526361143759" target="_blank">💬 WhatsApp (636)-114-3759</a>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 La Granja de los Compadres</p>
+    </footer>
+</body>
+</html>
