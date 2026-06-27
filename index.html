@@ -2,38 +2,94 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Gallinas Ponedoras - La Granja de los Compadres</title>
     <style>
-        body { font-family: Arial, sans-serif; background-color: #fff8dc; margin: 0; }
-        header { background-color: #b22222; color: white; text-align: center; padding: 20px; }
-        nav { background-color: #eee; padding: 10px; text-align: center; }
-        nav a { margin: 0 15px; text-decoration: none; color: #b22222; font-weight: bold; }
-        section { padding: 20px; text-align: center; }
-        footer { background-color: #b22222; color: white; text-align: center; padding: 10px; margin-top: 20px; }
-        img { max-width: 100%; border-radius: 10px; }
+        /* Base */
+        :root{--accent:#b22222;--bg:#fff8dc;--max:1200px}
+        *{box-sizing:border-box}
+        body { font-family: Arial, sans-serif; background-color: var(--bg); margin: 0; color:#222; }
+        a { color: inherit; }
+
+        /* Skip link (accessibility) */
+        .skip-link{position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden}
+        .skip-link:focus{position:static;width:auto;height:auto;margin:8px;padding:8px;background:#000;color:#fff;border-radius:4px}
+
+        header { background-color: var(--accent); color: white; text-align: center; padding: 20px; }
+        header h1{margin:0;font-size:1.6rem}
+        header p{margin:4px 0 0}
+
+        nav { background-color: #eee; padding: 10px; text-align: center; position:relative }
+        .menu-toggle{display:none;background:transparent;border:0;font-size:1.6rem;padding:6px;cursor:pointer;color:var(--accent)}
+        .nav-links{display:flex;justify-content:center;gap:1rem;align-items:center}
+        .nav-links a{ margin:0 8px; text-decoration: none; color: var(--accent); font-weight: bold; padding:6px 8px; border-radius:6px}
+        .nav-links a:focus{outline:2px solid #000}
+
+        section { padding: 20px; text-align: center; max-width:var(--max); margin:0 auto }
+        footer { background-color: var(--accent); color: white; text-align: center; padding: 10px; margin-top: 20px; }
+        img { max-width: 100%; height: auto; border-radius: 10px; display:block; margin:12px auto }
+
+        /* Mobile first tweaks */
+        h2{font-size:1.25rem;margin-top:0}
+        p{line-height:1.4}
+
+        /* Responsive nav for small screens */
+        @media (max-width: 600px){
+            .menu-toggle{display:block; position:absolute; left:10px; top:10px}
+            .nav-links{display:none;flex-direction:column;gap:.5rem;padding:8px}
+            .nav-links.show{display:flex}
+            nav{padding-top:40px}
+            header{padding:16px}
+            section{padding:16px}
+        }
+
+        /* Larger screens */
+        @media (min-width: 900px){
+            header h1{font-size:2rem}
+            section{padding:32px}
+        }
     </style>
 </head>
 <body>
+    <a class="skip-link" href="#main">Saltar al contenido</a>
     <header>
         <h1>Gallinas Ponedoras</h1>
         <p>La especialidad de La Granja de los Compadres</p>
     </header>
 
-    <nav>
-        <a href="index.html">Gallinas Ponedoras</a>
-        <a href="productos.html">Productos</a>
-        <a href="contacto.html">Contacto</a>
+    <nav aria-label="Menú principal">
+        <button class="menu-toggle" aria-expanded="false" aria-controls="primary-navigation">☰</button>
+        <div id="primary-navigation" class="nav-links">
+            <a href="index.html">Gallinas Ponedoras</a>
+            <a href="productos.html">Productos</a>
+            <a href="contacto.html">Contacto</a>
+        </div>
     </nav>
 
-    <section>
-        <h2>🐓 Nuestras Gallinas</h2>
-        <img src="https://upload.wikimedia.org/wikipedia/commons/9/9b/Hens_in_free_range.jpg" alt="Gallinas ponedoras">
-        <p>Las gallinas ponedoras producen huevos frescos y orgánicos todos los días.</p>
-        <p>Se alimentan de manera natural y viven en un ambiente saludable.</p>
-    </section>
+    <main id="main">
+      <section>
+          <h2>🐓 Nuestras Gallinas</h2>
+          <img src="https://upload.wikimedia.org/wikipedia/commons/9/9b/Hens_in_free_range.jpg" alt="Gallinas ponedoras">
+          <p>Las gallinas ponedoras producen huevos frescos y orgánicos todos los días.</p>
+          <p>Se alimentan de manera natural y viven en un ambiente saludable.</p>
+      </section>
+    </main>
 
     <footer>
         <p>&copy; 2026 La Granja de los Compadres</p>
     </footer>
+
+    <script>
+      // Simple menu toggle for mobile
+      (function(){
+        const btn = document.querySelector('.menu-toggle');
+        const nav = document.getElementById('primary-navigation');
+        if(!btn) return;
+        btn.addEventListener('click', function(){
+          const isOpen = nav.classList.toggle('show');
+          btn.setAttribute('aria-expanded', String(isOpen));
+        });
+      })();
+    </script>
 </body>
 </html>
