@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Gallinas Ponedoras - La Granja de los Compadres</title>
+    <style>
+        body { font-family: Arial, sans-serif; background-color: #fff8dc; margin: 0; }
+        header { background-color: #b22222; color: white; text-align: center; padding: 20px; }
+        nav { background-color: #eee; padding: 10px; text-align: center; }
+        nav a { margin: 0 15px; text-decoration: none; color: #b22222; font-weight: bold; }
+        section { padding: 20px; text-align: center; }
+        footer { background-color: #b22222; color: white; text-align: center; padding: 10px; margin-top: 20px; }
+        img { max-width: 100%; border-radius: 10px; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Gallinas Ponedoras</h1>
+        <p>La especialidad de La Granja de los Compadres</p>
+    </header>
+
+    <nav>
+        <a href="index.html">Gallinas Ponedoras</a>
+        <a href="productos.html">Productos</a>
+        <a href="contacto.html">Contacto</a>
+    </nav>
+
+    <section>
+        <h2>🐓 Nuestras Gallinas</h2>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/9/9b/Hens_in_free_range.jpg" alt="Gallinas ponedoras">
+        <p>Las gallinas ponedoras producen huevos frescos y orgánicos todos los días.</p>
+        <p>Se alimentan de manera natural y viven en un ambiente saludable.</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 La Granja de los Compadres</p>
+    </footer>
+</body>
+</html>
