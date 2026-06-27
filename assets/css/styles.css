@@ -1,0 +1,39 @@
+/* Global styles for Granja Los Compadres - extracted and unified */
+:root{--bg:#fff8dc;--text:#222;--max:1200px}
+*{box-sizing:border-box}
+html,body{height:100%;margin:0;padding:0;font-family:Arial, sans-serif;background-color:var(--bg);color:var(--text)}
+img{max-width:100%;height:auto;display:block}
+.container{max-width:var(--max);margin:0 auto;padding:20px}
+/* Accent colors per page */
+body.accent-red{--accent:#b22222}
+body.accent-green{--accent:#228B22}
+/* Header and nav */nheader, footer{background-color:var(--accent);color:#fff;text-align:center;padding:20px}
+header h1, footer p{margin:0}
+nav{background:#eee;padding:10px;text-align:center;position:relative}
+.nav-links{display:flex;justify-content:center;gap:1rem;align-items:center;flex-wrap:wrap}
+.nav-links a{margin:0 8px;text-decoration:none;color:var(--accent);font-weight:bold;padding:6px 8px;border-radius:6px}
+.nav-links a[aria-current="page"]{background:rgba(255,255,255,0.15);color:#fff}
+.menu-toggle{display:none;background:transparent;border:0;font-size:1.6rem;padding:6px;cursor:pointer;color:var(--accent)}
+.skip-link{position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden}
+.skip-link:focus{position:static;width:auto;height:auto;margin:8px;padding:8px;background:#000;color:#fff;border-radius:4px}
+section{padding:20px;text-align:center}
+h2{font-size:1.25rem;margin-top:0}
+p{line-height:1.4}
+footer{padding:12px}
+.whatsapp-btn{display:inline-block;background-color:#25D366;color:white;padding:12px 20px;border-radius:8px;text-decoration:none;font-weight:bold;margin:10px}
+.whatsapp-btn:hover{background-color:#1ebe5d}
+/* Responsive */
+@media (max-width:600px){
+  .menu-toggle{display:block;position:absolute;left:10px;top:10px}
+  .nav-links{display:none;flex-direction:column;gap:.5rem;padding:8px}
+  .nav-links.show{display:flex}
+  nav{padding-top:40px}
+  section{padding:16px}
+}
+@media (min-width:900px){
+  header h1{font-size:2rem}
+  section{padding:32px}
+}
+/* Map link */
+.map-link{display:inline-block;background:#fff;padding:10px 14px;border-radius:8px;color:var(--accent);text-decoration:none;border:2px solid rgba(0,0,0,0.05)}
+.map-link:hover{background:#f8f8f8}
